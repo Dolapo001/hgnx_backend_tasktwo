@@ -58,3 +58,25 @@ The API will be available at http://localhost:8000/api
 **Update details of an existing person by ID:** PUT /api/{user_id}/
 
 **Remove a person by ID:** DELETE /api/{user_id}/
+
+# Authentication and Authorization
+
+The API currently does not include authentication or authorization mechanisms. It assumes open access to all endpoints. For production use, consider implementing authentication and authorization as needed.
+
+# Dynamic Parameter Handling
+
+The API supports dynamic parameter handling. You can filter person records based on dynamic input, such as name, by providing query parameters in the request URL. For example:
+
+* GET /api?name=John will return persons with names containing "John."
+
+# Testing
+
+# Documentation
+Comprehensive API documentation is available in the Documentation.md
+
+
+# Known Limitations
+
+* The API assumes that the person's name is a required field for creating and updating a person record.
+* The API currently does not include authentication or authorization mechanisms. Implement these as needed for your specific use case.
+* Basic validation is in place to ensure that fields like name are of type string, but more advanced validation (e.g., email format validation) may be added as needed.

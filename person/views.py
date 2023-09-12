@@ -10,6 +10,13 @@ class CreatePersonView(generics.ListCreateAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
 
+    def get_queryset(self):
+        queryset = Person.objects.all()
+        name = self.request.query_params.get('name')
+        if name:
+            queryset = queryset.filter(name__icontains=name)
+        return queryset
+
     def perform_create(self, serializer):
         serializer.save()
 
