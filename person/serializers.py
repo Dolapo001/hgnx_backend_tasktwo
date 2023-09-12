@@ -7,3 +7,9 @@ class PersonSerializer(serializers.ModelSerializer):
         model = Person
         fields = ('id', 'name', 'age', 'email')
 
+    @staticmethod
+    def validate_name(value):
+        if not isinstance(value, str):
+            raise serializers.ValidationError("Name must be a string.")
+        return value
+

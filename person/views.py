@@ -6,14 +6,14 @@ from rest_framework import status
 from django.urls import reverse
 
 
-class PersonListView(generics.ListCreateAPIView):
+class CreatePersonView(generics.ListCreateAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
 
     def perform_create(self, serializer):
         serializer.save()
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED, headers={'Location': reverse('person-list')})
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers={'Location': reverse('create-person')})
 
 
 class PersonDetailView(generics.RetrieveUpdateDestroyAPIView):
@@ -28,4 +28,4 @@ class PersonDetailView(generics.RetrieveUpdateDestroyAPIView):
     def perform_destroy(self, instance):
         instance.delete()
 
-        return Response(status=status.HTTP_204_NO_CONTENT, headers={'Location': reverse('person-list')})
+        return Response(status=status.HTTP_204_NO_CONTENT, headers={'Location': reverse('create-person')})
