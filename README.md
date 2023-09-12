@@ -53,7 +53,7 @@ The API will be available at http://localhost:8000/api
 
 **Create a new person:** POST /api/
 
-Fetch details of a person by ID: GET /api/{user_id}/
+**Fetch details of a person by ID**: GET /api/{user_id}/
 
 **Update details of an existing person by ID:** PUT /api/{user_id}/
 
