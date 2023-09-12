@@ -17,4 +17,44 @@ Before you get started, make sure you have the following software and tools inst
 
 # Installation
 
-1
+## 1. Clone the repository:
+`git clone https://github.com/LoneStarrD/hgnx_backend_tasktwo.git
+`
+## 2. Change into the project directory:
+`cd person_api`
+
+## 3. Create a virtual environment:
+`python -m venv venv`
+
+## 4. Activate the virtual environment:
+* On Windows, activate the virtual environment:
+
+`env\Scripts\activate`
+
+* On macOS and Linux, activate the virtual environment:
+
+`source env/bin/activate`
+
+## 5. Install project dependencies:
+
+`pip install -r requirements.txt`
+
+# Usage
+
+## Running the Development Server
+### To run the development server, execute the following command:
+
+`python manage.py runserver`
+
+The API will be available at http://localhost:8000/api
+
+# API Endpoints
+### The API provides the following endpoints for managing person data:
+
+**Create a new person:** POST /api/
+
+Fetch details of a person by ID: GET /api/{person_id}/
+
+**Update details of an existing person by ID:** PUT /api/{person_id}/
+
+**Remove a person by ID:** DELETE /api/{person_id}/
