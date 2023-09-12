@@ -53,8 +53,8 @@ The API will be available at http://localhost:8000/api
 
 **Create a new person:** POST /api/
 
-Fetch details of a person by ID: GET /api/{person_id}/
+Fetch details of a person by ID: GET /api/{user_id}/
 
-**Update details of an existing person by ID:** PUT /api/{person_id}/
+**Update details of an existing person by ID:** PUT /api/{user_id}/
 
-**Remove a person by ID:** DELETE /api/{person_id}/
+**Remove a person by ID:** DELETE /api/{user_id}/
