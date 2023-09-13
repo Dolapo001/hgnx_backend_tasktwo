@@ -11,15 +11,14 @@ from django.urls import reverse
 class CreatePersonView(generics.ListCreateAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
-    lookup_field = 'pk'
 
     def get_object(self):
-        lookup_value = self.kwargs.get(self.lookup_field)
-        if lookup_value.isdigit():
-            self.lookup_field = 'pk'
+        identifier = self.kwargs['identifier']
+
+        if identifier.isdigit():
+            return get_object_or_404(self.queryset, id=identifier)
         else:
-            self.lookup_field = 'name'
-        return super().get_object()
+            return get_object_or_404(self.queryset, name=identifier)
 
     def perform_create(self, serializer):
         serializer.save()
