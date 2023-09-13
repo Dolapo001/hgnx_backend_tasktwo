@@ -6,7 +6,7 @@ The Person API provides endpoints to manage information about individuals, such 
 
 ## Base URL
 
-The base URL for accessing the Person API is `http://your-api-domain/api/`.
+The base URL for accessing the Person API is `https://person-xih0.onrender.com/api/`.
 
 ## Authentication
 
