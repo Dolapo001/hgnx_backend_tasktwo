@@ -75,5 +75,5 @@ Comprehensive API documentation is available in the [Documentation.md](https://g
 # Known Limitations
 
 * The API assumes that the person's name is a required field for creating and updating a person record.
-* The API currently does not include authentication or authorization mechanisms. Implement these as needed for your specific use case.
-* Basic validation is in place to ensure that fields like name are of type string, but more advanced validation (e.g., email format validation) may be added as needed.
+* The API currently does not include authentication or authorization mechanisms.
+* Basic validation is in place to ensure that fields like name are of type string.
