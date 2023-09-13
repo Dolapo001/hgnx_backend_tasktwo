@@ -1,3 +1,5 @@
+from rest_framework.generics import get_object_or_404
+
 from .models import Person
 from .serializers import PersonSerializer
 from rest_framework import generics
@@ -9,6 +11,18 @@ from django.urls import reverse
 class CreatePersonView(generics.ListCreateAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
+
+    def get_object(self):
+        # Try to get the object by ID
+        id = self.kwargs.get('id')
+        if id:
+            return get_object_or_404(Person, id=id)
+
+        # Try to get the object by name
+        name = self.kwargs.get('name')
+        if name:
+            return get_object_or_404(Person, name=name)
+
 
     def perform_create(self, serializer):
         serializer.save()

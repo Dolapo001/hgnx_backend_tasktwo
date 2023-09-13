@@ -1,9 +1,7 @@
 # Person API
 
-
 The Person API is a simple RESTful web service for managing person records. It provides endpoints for performing CRUD (Create, Read, Update, Delete) operations on person data. This README provides essential information on setting up, running, and using the API.
-# Person Postman Documentation
-dd
+
 
 # Prerequisites
 
@@ -12,7 +10,7 @@ Before you get started, make sure you have the following software and tools inst
 * Python (3.6 or higher)
 * Django (3.2 or higher)
 * Django Rest Framework (DRF) (3.12 or higher)
-* PostgreSQL (or another database of your choice)
+* SQLite
 
 
 # Installation
@@ -51,9 +49,9 @@ The API will be available at http://localhost:8000/api
 # API Endpoints
 ### The API provides the following endpoints for managing person data:
 
-**Create a new person:** POST /api/
+**Create a new person:** `POST /api/`
 
-**Fetch details of a person by ID**: GET /api/{user_id}/
+**Fetch details of a person by ID**: `GET /api/{user_id}/` or `GET /api/{user_name}/`
 
 **Update details of an existing person by ID:** PUT /api/{user_id}/
 
@@ -67,9 +65,14 @@ The API currently does not include authentication or authorization mechanisms. I
 
 The API supports dynamic parameter handling. You can filter person records based on dynamic input, such as name, by providing query parameters in the request URL. For example:
 
-* GET /api?name=John will return persons with names containing "John."
+* GET /api/name=John will return persons with names containing "John."
 
-# Testing
+# Testing 
+<img src="/home/lonestarr/Pictures/postman1.png"/>
+<img src="/home/lonestarr/Pictures/postman2.png"/>
+<img src="/home/lonestarr/Pictures/postman3.png"/>
+<img src="/home/lonestarr/Pictures/postman4.png"/>
+<img src="/home/lonestarr/Pictures/postman5.png"/>
 
 # Documentation
 Comprehensive API documentation is available in the [Documentation.md](https://github.com/LoneStarrD/hgnx_backend_tasktwo/blob/main/Documentation.md)
