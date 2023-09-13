@@ -29,3 +29,16 @@ No authentication is required to access the Person API in this example.
     "age": 30,
     "email": "john.doe@example.com"
   }
+  
+### Retrieve Details of a Person
+
+* URL: `GET /api/{user_id}/`
+- **Description:**  Retrieve details of a person by their ID.
+- **Parameters:**
+  - user_id (integer, required): The unique identifier of the person.
+
+**Example Request:**
+
+`GET /api/1/`
+
+
