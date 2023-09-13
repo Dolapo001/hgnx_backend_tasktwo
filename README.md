@@ -72,7 +72,7 @@ The API supports dynamic parameter handling. You can filter person records based
 # Testing
 
 # Documentation
-Comprehensive API documentation is available in the Documentation.md
+Comprehensive API documentation is available in the [Documentation.md](https://github.com/LoneStarrD/hgnx_backend_tasktwo/blob/main/Documentation.md)
 
 
 # Known Limitations
