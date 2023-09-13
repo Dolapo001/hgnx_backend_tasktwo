@@ -11,6 +11,7 @@ from django.urls import reverse
 class CreatePersonView(generics.ListCreateAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
+    lookup_field = 'identifier'
 
     def get_object(self):
         identifier = self.kwargs['identifier']
