@@ -66,14 +66,7 @@ The API currently does not include authentication or authorization mechanisms. I
 The API supports dynamic parameter handling. You can filter person records based on dynamic input, such as name, by providing query parameters in the request URL. For example:
 
 * GET /api/name=John will return persons with names containing "John."
-# Testing
 
-
-<img src="/home/lonestarr/PycharmProjects/person_api/postman1.png"/>
-<img src="/home/lonestarr/PycharmProjects/person_api/postman2.png"/>
-<img src="/home/lonestarr/PycharmProjects/person_api/postman3.png"/>
-<img src="/home/lonestarr/PycharmProjects/person_api/postman4.png"/>
-<img src="/home/lonestarr/PycharmProjects/person_api/postman5.png"/>
 
 # Documentation
 Comprehensive API documentation is available in the [Documentation.md](https://github.com/LoneStarrD/hgnx_backend_tasktwo/blob/main/Documentation.md)
