@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import CreatePersonView, PersonDetailView, PersonByNameView
+from . import views
 
 urlpatterns = [
-    path('api/', CreatePersonView.as_view(), name='create-person'),
-    path('api/<int:pk>', PersonDetailView.as_view(), name='person-detail'),
-    path('api/<str:name>', PersonByNameView.as_view(), name='person-by-name'),
+    path('api/<int:pk>/', views.PersonDetailView.as_view(), name='person-detail'),
+    path('api/<str:name__iexact>', views.PersonByNameView.as_view(), name='person-by-name'),
+    path('api/', views.CreatePersonView.as_view(), name='create-person'),
 ]
