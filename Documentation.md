@@ -90,7 +90,7 @@ No authentication is required to access the Person API in this example.
 * **Description:** Retrieve details of a person by their name.
 * **Example Request:**
 
-`GET /api/John/`
+`GET /api/John Doe/`
 
 * #### Response:
 
