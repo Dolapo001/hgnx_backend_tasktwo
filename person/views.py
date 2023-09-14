@@ -32,6 +32,13 @@ class PersonDetailView(generics.RetrieveUpdateDestroyAPIView):
         instance.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data)
+
 
 class PersonByNameView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Person.objects.all()
@@ -56,3 +63,10 @@ class PersonByNameView(generics.RetrieveUpdateDestroyAPIView):
     def perform_destroy(self, instance):
         instance.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data)
