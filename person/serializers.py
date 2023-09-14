@@ -7,10 +7,19 @@ class PersonSerializer(serializers.ModelSerializer):
     age = serializers.IntegerField(required=False)
     email = serializers.EmailField(required=False)
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+
+        if not instance.age:
+            data.pop('age', None)
+
+        if not instance.email:
+            data.pop('email', None)
+        return data
+
     class Meta:
         model = Person
         fields = ('id', 'name', 'age', 'email')
-
 
     @staticmethod
     def validate_name(value):
