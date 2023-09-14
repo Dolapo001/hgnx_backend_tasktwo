@@ -66,7 +66,7 @@ No authentication is required to access the Person API in this example.
   ]
   
 ### Get Person by ID
-* **URL:** GET /api/{user_id}/
+* **URL:** `GET /api/{user_id}/`
 * **Description:** Retrieve details of a person by their ID.
 * **Example Request:**
 
