@@ -3,11 +3,14 @@ from .models import Person
 
 
 class PersonSerializer(serializers.ModelSerializer):
-    name = serializers.Charfield(required=True)
+    name = serializers.CharField(required=True)
+    age = serializers.IntegerField(required=False)
+    email = serializers.EmailField(required=False)
 
     class Meta:
         model = Person
         fields = ('id', 'name', 'age', 'email')
+
 
     @staticmethod
     def validate_name(value):
