@@ -3,6 +3,6 @@ from .views import CreatePersonView, PersonDetailView, PersonByNameView
 
 urlpatterns = [
     path('api/', CreatePersonView.as_view(), name='create-person'),
-    path('api/<int:pk>', PersonDetailView.as_view(), name='person-detail'),
-    path('api/<str:name__iexact>', PersonByNameView.as_view(), name='person-by-name'),
+    path('api/<str:pk>', PersonDetailView.as_view(), name='person-detail'),
+    path('api/<str:name>', PersonByNameView.as_view(), name='person-by-name'),
 ]
